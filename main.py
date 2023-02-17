@@ -21,9 +21,7 @@ def find_mismatch(text):
     return "Success"
 
 def main():
-    c = input()
-    if "i" in c:
-        text = input()
+    text = input()
     mismatch = find_mismatch(text)
     print(mismatch)
 
