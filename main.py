@@ -1,3 +1,5 @@
+# python3
+
 from collections import namedtuple
 Bracket = namedtuple("Bracket", ["char", "position"])
 def are_matching(left, right):
@@ -20,11 +22,13 @@ def main():
         manual = input()
         mismatch = find_mismatch(manual)
         print(mismatch)
-    if  "F" in text:
-        for i in range(6):
+    if "F" in text:
+        i = 0
+        while (i < 6):
             with open(f"test/{i}") as auto:
                 auto = auto.read()
                 mismatch = find_mismatch(auto)
                 print(mismatch)
+            i += 1
 if __name__ == "__main__":
     main()
