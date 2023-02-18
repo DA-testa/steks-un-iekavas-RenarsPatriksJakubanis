@@ -16,11 +16,11 @@ def find_mismatch(text):
     return "Success"
 def main():
     text = input()
-    if text == "I":
+    if "I" in text:
         manual = input()
         mismatch = find_mismatch(manual)
         print(mismatch)
-    if text == "F":
+    if  "F" in text:
         for i in range(6):
             with open(f"test/{i}") as auto:
                 auto = auto.read()
