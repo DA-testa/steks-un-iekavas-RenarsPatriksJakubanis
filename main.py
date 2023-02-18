@@ -24,8 +24,8 @@ def main():
     text = input()
 
     if text == "I":
-        manual = input()
-        mismatch = find_mismatch(manual)
+        text = input()
+        mismatch = find_mismatch(text)
         print(mismatch)
 
     if text == "F":
