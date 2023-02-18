@@ -1,8 +1,12 @@
 # python3
+
 from collections import namedtuple
+
 Bracket = namedtuple("Bracket", ["char", "position"])
+
 def are_matching(left, right):
     return (left + right) in ["()", "[]", "{}"]
+
 def find_mismatch(text):
     opening_brackets_stack = []
     for i, next in enumerate(text):
@@ -15,12 +19,15 @@ def find_mismatch(text):
     if opening_brackets_stack:
         return opening_brackets_stack[0].position
     return "Success"
+
 def main():
     text = input()
+
     if text == "I":
         manual = input()
         mismatch = find_mismatch(manual)
         print(mismatch)
+
     if text == "F":
         i = 0
         while (i < 6):
@@ -29,5 +36,6 @@ def main():
                 mismatch = find_mismatch(auto)
                 print(mismatch)
             i += 1
+            
 if __name__ == "__main__":
     main()
